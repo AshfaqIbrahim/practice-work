@@ -280,22 +280,29 @@
 
 
 
-//Callback function
-function greet(name,callback){
-    console.log("Hello " +name);
-    callback();
-}
+// //Callback function
+// function greet(name,callback){
+//     console.log("Hello " +name);
+//     callback();
+// }
 
-function sayBye(){
-    console.log("GoodBye!");
-}
-greet("Ashfaq",sayBye);
+// function sayBye(){
+//     console.log("GoodBye!");
+// }
+// greet("Ashfaq",sayBye);
 
 
 
 
 //One more examplee for callback function
-function sum(){
-
+function sum(callback, a, b){
+    let result = a + b;
+    callback(result);
 }
+
+function display(result){
+    console.log(result);
+}
+
+sum(display, 5, 3);
 
