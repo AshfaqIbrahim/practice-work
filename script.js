@@ -280,7 +280,7 @@
 
 
 
-
+//Callback function
 function greet(name,callback){
     console.log("Hello " +name);
     callback();
@@ -289,6 +289,13 @@ function greet(name,callback){
 function sayBye(){
     console.log("GoodBye!");
 }
-
 greet("Ashfaq",sayBye);
+
+
+
+
+//One more examplee for callback function
+function sum(){
+
+}
 
