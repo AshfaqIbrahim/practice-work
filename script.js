@@ -294,15 +294,44 @@
 
 
 
-//One more examplee for callback function
-function sum(callback, a, b){
-    let result = a + b;
-    callback(result);
+// //One more examplee for callback function
+// function sum(callback, a, b){
+//     let result = a + b;
+//     callback(result);
+// }
+
+// function display(result){
+//     console.log(result);
+// }
+
+// sum(display, 5, 3);
+
+
+
+// //Object using Object Constructor
+// function Person (name,age,city){
+//     this.name = name;
+//     this.age = age;
+//     this.city = city;
+// }
+
+// //create multiple objects using the constructor
+// let person1 = new Person("Ashfaq",22,"Kasaragod");
+// let person2 = new Person("Ibrahim",20,"Mangalore");
+
+// console.log(person1.name);
+// console.log(person1.age);
+
+// console.log(person2.city);
+
+
+
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+    this.city = "Kasaragod"
+    
 }
 
-function display(result){
-    console.log(result);
-}
-
-sum(display, 5, 3);
-
+let person1 = new Person("Ashfaq",22);
+console.log(person1);
