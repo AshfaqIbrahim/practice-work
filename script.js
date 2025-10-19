@@ -411,23 +411,40 @@
 
 
 
-//Nested object destructuring
-const employee = {
-    id : 101,
-    details : {
-        firstName : "Ibrahim",
-        lastName : "Ashfaq"
-    }
-};
+// //Nested object destructuring
+// const employee = {
+//     id : 101,
+//     details : {
+//         firstName : "Ibrahim",
+//         lastName : "Ashfaq"
+//     }
+// };
 
-const {details : {firstName, lastName}} = employee;
-console.log(firstName);
-console.log(lastName);
+// const {details : {firstName, lastName}} = employee;
+// console.log(firstName);
+// console.log(lastName);
 
 
 ////****************************************************************************************************************
 
+// //Method in JS
+// // A function inside an objecvt is known as 'Method'
 
+// const person = {
+//     name : "Ashfaq",
+//     age : 22,
+//     greet : function (){
+//         console.log("Hello, " +this.name);
+//     }
+// }
+
+// person.greet();
+
+// //Adding method after creating the Object
+// person.sayBye = function (){
+//     console.log("Goodbye, "+this.name);
+// }
+// person.sayBye();
 
 
 
