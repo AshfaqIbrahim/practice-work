@@ -326,12 +326,109 @@
 
 
 
-function Person(name, age){
-    this.name = name;
-    this.age = age;
-    this.city = "Kasaragod"
+// function Person(name, age){
+//     this.name = name;
+//     this.age = age;
+//     this.city = "Kasaragod"
     
-}
+// }
 
-let person1 = new Person("Ashfaq",22);
-console.log(person1);
+// let person1 = new Person("Ashfaq",22);
+// console.log(person1);
+
+
+////****************************************************************************************************************
+
+// // Array destructuring
+
+// //Basic destructuring
+// const arr = [1,2,3,4,5];
+// const [a,b,c] = arr;
+
+// console.log(a);
+// console.log(b);
+
+
+
+// //Skip elements in Array destructuring using comma(,)
+// const fruits = ["Apple", "Banana", "Mango", "Cherry"];
+// const [fruit1, , fruit3, fruit4] = fruits;   //skipped banana using comma(,) 
+
+// console.log(fruit1);
+// console.log(fruit3);
+// console.log(fruit4);
+
+
+
+// //Default values in Array destructuring
+// const cars = ["BMW", "Mercedes", "LandRover"];
+// const [car1, car2, car3, car4="Porche"] = cars;   //Here it searches for car4 in the array first and if it is not available it returns thedefault value that we have given. if i give car3 a default value, it will not return the default value because, car3 already has a value inside the array
+
+// console.log(car1);
+// console.log(car2);
+// console.log(car4); //prints default value
+
+
+
+// //Swapping values in Array destructuring (It's a perfect swapping without a temporary variable)
+// let x = 10;
+// let y = 20;
+
+// [x,y] = [y,x];  //now x is 20 and y is 10
+// console.log(x);
+// console.log(y); 
+
+
+////****************************************************************************************************************
+
+// //Object destructuring
+// const person = {
+//     name : "Ashfaq",
+//     age : 22,
+//     city : "Ksd"
+// }
+
+// const {name:userName, age, city} = person; //here, variable name must match the property name(key),
+// //you can also rename the key of here {name : userName, age : personAge, city : place }
+
+// console.log(userName);
+// console.log(city);
+
+
+
+// //Default values in Object destructuring
+// const person = {
+//     name : "Ashfaq",
+//     age : 22,
+// }
+
+// const {name, age, city = "Ksd"} = person; 
+// //here i gave a default value to 'city' and when the runtime it checks if the object has 'city', if not exist it will return default value 'Ksd'.
+
+// console.log(name);
+// console.log(age);
+// console.log(city);
+
+
+
+//Nested object destructuring
+const employee = {
+    id : 101,
+    details : {
+        firstName : "Ibrahim",
+        lastName : "Ashfaq"
+    }
+};
+
+const {details : {firstName, lastName}} = employee;
+console.log(firstName);
+console.log(lastName);
+
+
+////****************************************************************************************************************
+
+
+
+
+
+
