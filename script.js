@@ -532,15 +532,156 @@
 // fullName.apply(name2, ["Kjr", "Kerala"]);
 
 
-// bind
-let name = {
-  firstname : "Ibrahim",
-  lastname : "Ashfaq"
-}
+// // bind
+// let name = {
+//   firstname : "Ibrahim",
+//   lastname : "Ashfaq"
+// }
 
-let fullName = function(city){
-  console.log(this.firstname + " " + this.lastname +" from "+ city);
-}
+// let fullName = function(city){
+//   console.log(this.firstname + " " + this.lastname +" from "+ city);
+// }
 
-let result = fullName.bind(name, "delhi");
-result();
+// let result = fullName.bind(name, "delhi");
+// result();
+
+
+////****************************************************************************************************************
+
+
+//Map in Object
+let userMap = new Map();
+
+//Setting ket value pairs
+userMap.set("name", "Ashfaq");
+userMap.set("age", 22);
+userMap.set("city", "Kasaragod");
+
+
+
+
+// //Retrieve value
+// console.log(userMap.get("name"));
+
+// //Check existence
+// console.log(userMap.has("age"));
+
+// //Size of map
+// console.log(userMap.size);
+
+
+// //Remove element from map
+// console.log(userMap.delete("city")); //city has been removed
+
+// //clear all
+// console.log(userMap.clear()); //clears everything 
+
+
+////Using for of loop to get key and value
+// for(let [key,value] of userMap){
+//   console.log([key,value]);
+// }
+
+
+
+// //Number as key
+// let map1 = new Map();
+// map1.set(1, "One");
+// map1.set(2, "Two");
+
+// console.log(map1.get(1));
+
+
+// //String as key
+// let map2 = new Map();
+// map2.set("name", "Ashfaq");
+
+// console.log(map2.get("name"));
+
+
+// //Boolean as key
+// let map3 = new Map();
+// map3.set(true, "Yes");
+// map3.set(false, "No");
+
+// console.log(map3.get(true));
+
+
+// //Object as key
+// let map4 = new Map();
+// let user = {id:1, name:"Ashfaq"};
+// map4.set(user,"User details stored");
+
+// console.log(map4.get(user));
+
+
+// //Arry as key
+// let map5 = new Map();
+// let arr = [1,2,3];
+
+// map5.set(arr,"Array values stored");
+// console.log(map5.get(arr));
+
+
+// //Function as key
+// let map6 = new Map();
+// function greet(){
+//   return "Hello"
+// }
+
+// map6.set(greet, "This is a function")
+// console.log(map6.get(greet));
+
+
+////****************************************************************************************************************
+
+// //Sets in JS
+
+// let set = new Set();
+
+// //Add values
+// set.add("Apple");
+// set.add("Banana");
+// set.add("Mango");
+// set.add("Grapes")
+
+// //delete value
+// console.log(set.delete("Banana")); //removed banana
+// console.log(set);
+
+// //Check existence of a value
+// console.log(set.has("Apple"));
+
+// //Size of set
+// console.log(set.size); //3 because "banana" has been deleted
+
+// //Clear all elements
+// console.log(set.clear());
+
+
+//Iteration over Set
+//Using for..of
+
+// for(let value of set){
+//   console.log(value);
+// }
+
+// //Using forEach
+// set.forEach(function(value){
+//   let result = value.toUpperCase();
+//   console.log(result);
+// });
+ 
+
+// //values()
+// console.log(set.values());
+
+
+// //keys()
+// console.log(set.keys());
+
+
+// //entries()
+// console.log(set.entries());
+
+
