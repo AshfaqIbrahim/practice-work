@@ -549,13 +549,13 @@
 ////****************************************************************************************************************
 
 
-//Map in Object
-let userMap = new Map();
+// //Map in Object
+// let userMap = new Map();
 
-//Setting ket value pairs
-userMap.set("name", "Ashfaq");
-userMap.set("age", 22);
-userMap.set("city", "Kasaragod");
+// //Setting ket value pairs
+// userMap.set("name", "Ashfaq");
+// userMap.set("age", 22);
+// userMap.set("city", "Kasaragod");
 
 
 
@@ -734,3 +734,4 @@ userMap.set("city", "Kasaragod");
 // }
 
 // obj.sayBye();
+
