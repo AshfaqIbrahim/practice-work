@@ -685,3 +685,52 @@ userMap.set("city", "Kasaragod");
 // console.log(set.entries());
 
 
+////****************************************************************************************************************
+
+
+//First-class function
+
+// // Store function in a variable
+// let greet = function(){
+//   console.log("Hello");
+// }
+// greet();
+
+
+// //Return function as an argument(callback)
+// function sayHi(){
+//   console.log("Hello");
+// }
+
+// function greet(callback){
+//   callback();
+// }
+
+// greet(sayHi);
+
+
+
+// //Return function from another function
+// function outer(){
+//   return function inner(){
+//     console.log("Hello"); 
+//   }
+// }
+
+// let result = outer();
+// result();
+
+
+// //Store function in array and object
+// let arr = [function(){console.log("Hello");}, 
+//   function(){console.log("Hi");}];
+
+// arr[0]();
+
+// //In arr
+// let obj = {
+//   greet: function(){console.log("Hello");},
+//   sayBye : function(){console.log("Bye");}
+// }
+
+// obj.sayBye();
