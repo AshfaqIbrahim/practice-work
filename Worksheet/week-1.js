@@ -121,11 +121,14 @@
 // console.log(result);
 
 
-//Use map() to create an array where each element is a string showing its index and value.
-let numbers = ["apple","banana","cherry"];
+// //Use map() to create an array where each element is a string showing its index and value.
+// let numbers = ["apple","banana","cherry"];
 
-let result = numbers.map((fruit,index)=> {
-    return `Index: ${index}: ${fruit}`
-})
+// let result = numbers.map((fruit,index)=> {
+//     return `Index: ${index}: ${fruit}`
+// })
 
-console.log(result);
+// console.log(result);
+
+
+//Week-1 Task

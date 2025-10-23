@@ -226,8 +226,12 @@
 // let result = Array.from(num,(x) => x*2);
 // console.log(result);
 
+
+////****************************************************************************************************************
+
+
 // //Callback function
-// function greet(name,callback){
+// function greet(callback,name){
 //     console.log("Hello " +name);
 //     callback();
 // }
@@ -235,7 +239,8 @@
 // function sayBye(){
 //     console.log("GoodBye!");
 // }
-// greet("Ashfaq",sayBye);
+// greet(sayBye, "Ashfaq");
+
 
 // //One more examplee for callback function
 // function sum(callback, a, b){
@@ -248,6 +253,7 @@
 // }
 
 // sum(display, 5, 3);
+
 
 // //Object using Object Constructor
 // function Person (name,age,city){
@@ -659,8 +665,9 @@
 // console.log(set.clear());
 
 
-//Iteration over Set
-//Using for..of
+// // Iteration over Set
+
+// // Using for..of
 
 // for(let value of set){
 //   console.log(value);
@@ -735,3 +742,64 @@
 
 // obj.sayBye();
 
+
+// //Math method
+
+// let num = 5.5;
+// let result = Math.round(num);
+// console.log(result);
+
+// let num1 = 3.7;
+// let result1 = Math.floor(num1)
+// console.log(result1);
+
+// function add(){
+//     return sum;
+// }
+
+// function method(callback,num1,num2){
+//     thsum = num1 + num2;
+//     callback();
+// }
+// console.log(add(method,6,4));
+
+
+// //
+// let randomNum = Math.floor(Math.random() * 10000) + 1;
+// console.log(randomNum);
+
+//Callback function
+
+// //1. Write a function calculate that takes two numbers and a callback function. Inside it, multiply the numbers and pass the result to the callback.
+
+// function double(callback,num1,num2){
+//     let result = num1 * num2;
+//     callback(result);
+
+// }
+// function display(res){
+//     console.log(res);
+// }
+// double(display,5,2);
+
+
+////****************************************************************************************************************
+
+// //Synchronous 
+// console.log("I run first ");
+// for(i=0;i<=1000;i++){
+//     //a long blocking code
+//  }
+// console.log("I run in middle");
+// console.log("I run at the end");
+
+
+//Asynchronous
+console.log("1. First");
+
+//setTimepout is asynchronous - It is sent to web API, it runs in the bg.
+setTimeout( ()=> {
+    console.log("3. Asynchronous tasks completed");    
+},0);
+
+console.log("2. End");
