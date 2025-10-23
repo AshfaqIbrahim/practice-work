@@ -226,9 +226,7 @@
 // let result = Array.from(num,(x) => x*2);
 // console.log(result);
 
-
 ////****************************************************************************************************************
-
 
 // //Callback function
 // function greet(callback,name){
@@ -241,7 +239,6 @@
 // }
 // greet(sayBye, "Ashfaq");
 
-
 // //One more examplee for callback function
 // function sum(callback, a, b){
 //     let result = a + b;
@@ -253,7 +250,6 @@
 // }
 
 // sum(display, 5, 3);
-
 
 // //Object using Object Constructor
 // function Person (name,age,city){
@@ -393,7 +389,6 @@
 // let greet = outer();
 // greet();
 
-
 // //Higher order functionn
 
 // function greet(name, formatter) {
@@ -411,8 +406,6 @@
 // greet("Ashfaq", upperCase); //greet is the higher order function (because greet takes another function as an argument)
 // greet("Ibrahim", lowerCase);
 
-
-
 // function add(a,b,formatter){
 //   console.log(formatter(a,b));
 // }
@@ -422,8 +415,6 @@
 // }
 
 // add(5,3,addition); //add is the higher order function, it takes addition function as a parameter.
-
-
 
 //Ex 2 : Function returning another funnction
 
@@ -436,7 +427,6 @@
 // const double = multiplyBy(2);
 // console.log(double(5));
 
-
 // function greet(name){
 //   return function (){
 //     return name.toUpperCase();
@@ -445,7 +435,6 @@
 
 // const upper = greet("ashfaq");
 // console.log(upper());
-
 
 ////****************************************************************************************************************
 
@@ -456,7 +445,6 @@
 // console.log(add(5,5));
 // console.log(add(5,5));  //This is pure function becasue the result will always the same
 
-
 // //Impure function
 // let total = 0;
 // function addToValue(value){
@@ -465,7 +453,6 @@
 // }
 // console.log(addToValue(5));
 // console.log(addToValue(5)); //This is an impure function becasue the result will be different everytime
-
 
 ////****************************************************************************************************************
 
@@ -479,22 +466,17 @@
 // //getItem()
 // console.log(localStorage.getItem("name"));
 
-
 // //removeItem()
 // localStorage.removeItem("city");
-
 
 // //key()
 // console.log(localStorage.key(1));
 
-
 // //length
 // console.log(localStorage.length);
 
-
 // //clear()
 // localStorage.clear();
-
 
 // //SessionStorage
 // let key = prompt("Enter a key that you want to set: ");
@@ -502,29 +484,24 @@
 
 // localStorage.setItem(key, value);
 
-
 // //storageEvent
 // window.onstorage = (a) => {
 //   alert("Changed something!")
 //   console.log(a);
 // }
 
-
 ////****************************************************************************************************************
 
-
-// //call() 
+// //call()
 // let name = {
 //   firstname : "Ibrahim",
 //   lastname : "Ashfaq"
 // }
 // let fullName = function(city,state){
 //   console.log(this.firstname +" "+ this.lastname +" "+ "from" +" "+ city +", "+ state);
-   
+
 // }
 // fullName.call(name,"Ksd","Kerala");
-
-
 
 //  //apply
 // let name2 = {
@@ -533,10 +510,9 @@
 // }
 // let fullName = function(city,state){
 //   console.log(this.firstname +" "+ this.lastname +" "+ "from" +" "+ city +", "+ state);
-   
+
 // }
 // fullName.apply(name2, ["Kjr", "Kerala"]);
-
 
 // // bind
 // let name = {
@@ -551,9 +527,7 @@
 // let result = fullName.bind(name, "delhi");
 // result();
 
-
 ////****************************************************************************************************************
-
 
 // //Map in Object
 // let userMap = new Map();
@@ -562,9 +536,6 @@
 // userMap.set("name", "Ashfaq");
 // userMap.set("age", 22);
 // userMap.set("city", "Kasaragod");
-
-
-
 
 // //Retrieve value
 // console.log(userMap.get("name"));
@@ -575,20 +546,16 @@
 // //Size of map
 // console.log(userMap.size);
 
-
 // //Remove element from map
 // console.log(userMap.delete("city")); //city has been removed
 
 // //clear all
-// console.log(userMap.clear()); //clears everything 
-
+// console.log(userMap.clear()); //clears everything
 
 ////Using for of loop to get key and value
 // for(let [key,value] of userMap){
 //   console.log([key,value]);
 // }
-
-
 
 // //Number as key
 // let map1 = new Map();
@@ -597,13 +564,11 @@
 
 // console.log(map1.get(1));
 
-
 // //String as key
 // let map2 = new Map();
 // map2.set("name", "Ashfaq");
 
 // console.log(map2.get("name"));
-
 
 // //Boolean as key
 // let map3 = new Map();
@@ -612,7 +577,6 @@
 
 // console.log(map3.get(true));
 
-
 // //Object as key
 // let map4 = new Map();
 // let user = {id:1, name:"Ashfaq"};
@@ -620,14 +584,12 @@
 
 // console.log(map4.get(user));
 
-
 // //Arry as key
 // let map5 = new Map();
 // let arr = [1,2,3];
 
 // map5.set(arr,"Array values stored");
 // console.log(map5.get(arr));
-
 
 // //Function as key
 // let map6 = new Map();
@@ -637,7 +599,6 @@
 
 // map6.set(greet, "This is a function")
 // console.log(map6.get(greet));
-
 
 ////****************************************************************************************************************
 
@@ -664,7 +625,6 @@
 // //Clear all elements
 // console.log(set.clear());
 
-
 // // Iteration over Set
 
 // // Using for..of
@@ -678,22 +638,17 @@
 //   let result = value.toUpperCase();
 //   console.log(result);
 // });
- 
 
 // //values()
 // console.log(set.values());
 
-
 // //keys()
 // console.log(set.keys());
-
 
 // //entries()
 // console.log(set.entries());
 
-
 ////****************************************************************************************************************
-
 
 //First-class function
 
@@ -702,7 +657,6 @@
 //   console.log("Hello");
 // }
 // greet();
-
 
 // //Return function as an argument(callback)
 // function sayHi(){
@@ -715,21 +669,18 @@
 
 // greet(sayHi);
 
-
-
 // //Return function from another function
 // function outer(){
 //   return function inner(){
-//     console.log("Hello"); 
+//     console.log("Hello");
 //   }
 // }
 
 // let result = outer();
 // result();
 
-
 // //Store function in array and object
-// let arr = [function(){console.log("Hello");}, 
+// let arr = [function(){console.log("Hello");},
 //   function(){console.log("Hi");}];
 
 // arr[0]();
@@ -741,7 +692,6 @@
 // }
 
 // obj.sayBye();
-
 
 // //Math method
 
@@ -763,7 +713,6 @@
 // }
 // console.log(add(method,6,4));
 
-
 // //
 // let randomNum = Math.floor(Math.random() * 10000) + 1;
 // console.log(randomNum);
@@ -782,10 +731,11 @@
 // }
 // double(display,5,2);
 
-
+////****************************************************************************************************************
+//                                              WEEK - 2
 ////****************************************************************************************************************
 
-// //Synchronous 
+// //                                          1. Synchronous
 // console.log("I run first ");
 // for(i=0;i<=1000;i++){
 //     //a long blocking code
@@ -793,13 +743,72 @@
 // console.log("I run in middle");
 // console.log("I run at the end");
 
+// //                                          1. Asynchronous
+// console.log("1. First");
 
-//Asynchronous
-console.log("1. First");
+// //setTimepout is asynchronous - It is sent to web API, it runs in the bg.
+// setTimeout( ()=> {
+//     console.log("3. Asynchronous tasks completed");
+// },0);
 
-//setTimepout is asynchronous - It is sent to web API, it runs in the bg.
-setTimeout( ()=> {
-    console.log("3. Asynchronous tasks completed");    
-},0);
+// console.log("2. End");
 
-console.log("2. End");
+//                                             2. Execution context
+
+// function square(n){
+//     var result = n * n;
+//     return result;
+// }
+
+// console.log(square(5));
+
+// //Here the global variable and function parameter has same name so the function parameter takes the priority and ignores the global variables value
+// var n = 5;
+// function square(n) {
+//   var ans = n * n;
+//   return ans;
+// }
+
+// var square1 = square(n);
+// var square2 = square(8);
+
+// console.log(square1)
+// console.log(square2)
+
+//                                         3. Strict mode
+
+// //Ex1: Non-strict mode
+// function RegularFunc() {
+//   username = "Ashfaq";
+//   console.log(username);
+// }
+// RegularFunc();
+
+// //Ex:2 Non-strict mode (duplicating parameter name)
+// function RegularFunc(num,num) { //here first parameter is ignored due to duplication
+//     console.log(num+num);
+// }
+// RegularFunc(5,2); //here 2 will be assigned to second parameter and does the calculation (2 + 2 = 4)
+
+
+// //Ex:2 Strict mode
+// "use strict"
+// function strictFunc() {
+//     username = "Ashfaq";
+//     console.log(username);
+// }
+// strictFunc();
+
+// //Ex:2 Strict mode (duplicating parameter name)
+// function strictFunc(num,num){
+//     "use strict"
+//     console.log(num+num);
+// }
+// strictFunc(4,3); //here it will throw syntax error (Duplicate parameter names are not allowed when using strict mode)
+
+
+// //using reserved keywords
+// //it will throw error while using strict mode, and it will work fine in regular mode
+// "use strict"
+// let package = "Hello";
+// console.log(package);
