@@ -790,7 +790,6 @@
 // }
 // RegularFunc(5,2); //here 2 will be assigned to second parameter and does the calculation (2 + 2 = 4)
 
-
 // //Ex:2 Strict mode
 // "use strict"
 // function strictFunc() {
@@ -806,9 +805,113 @@
 // }
 // strictFunc(4,3); //here it will throw syntax error (Duplicate parameter names are not allowed when using strict mode)
 
-
 // //using reserved keywords
 // //it will throw error while using strict mode, and it will work fine in regular mode
 // "use strict"
 // let package = "Hello";
 // console.log(package);
+
+////****************************************************************************************************************
+
+// //                                        1. Simple try...catch
+// try {
+//   // Code that may throw an exception
+//   let result = 10 / num; // If 'num' is undefined, this throws a ReferenceError
+//   console.log(result);
+// }
+// catch (error) {
+//   // Code to handle the exception
+//   console.error("An error occurred:", error.message);
+//   console.log("Error name:", error.name);
+// }
+// // Execution continues here after the error is handled
+
+// //                                         1.1. try...catch...finally
+// function checkAge(age) {
+//   try {
+//     if (age < 18) {
+//       throw new Error("User must be 18 or older.");
+//     }
+//     console.log("Access granted.");
+//   }
+//   catch (err) {
+//     console.error("Caught error:", err.message);
+//   }
+//   finally {
+//     // This runs after try or after catch
+//     console.log("End of age verification process.");
+//   }
+// }
+
+// checkAge(16);
+// // Output:
+// // Caught error: User must be 18 or older.
+// // End of age verification process.
+
+
+////****************************************************************************************************************
+
+
+// //stack overflow
+// function stackOverflow(){
+//     stackOverflow();
+// }
+// stackOverflow();
+
+// // stack underflow
+// function stackUnderflow() {
+//   let stack = [];
+
+//   try {
+//     let popped = stack.pop();
+//     if (popped === undefined) {
+//       throw new RangeError("Stack underflow");
+//     }
+//   } catch (err) {
+//     console.log(err.name, ":", err.message);
+//   }
+// }
+// stackUnderflow();
+
+class Car {
+  // 1. Constructor
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+    this.isRunning = false;
+  }
+
+  // 2. Method
+  start() {
+    this.isRunning = true;
+    return `${this.make} ${this.model} is started.`;
+  }
+
+  // 3. Getter
+  get status() {
+    return this.isRunning ? 'running' : 'stopped';
+  }
+
+  // 4. Static Method
+  static describe() {
+    return 'This is a blueprint for car objects.';
+  }
+}
+const myCar = new Car("BMW", "M2");
+
+//Accessing the make of the 'Car'
+console.log(myCar.make);
+
+//Accessing the model of the 'Car'
+console.log(myCar.model);
+
+//Starting the car
+console.log(myCar.start());
+
+
+//Checking the status of myCar
+console.log( `${myCar.make} ${myCar.model} is ${myCar.status}` ); 
+
+
+//Describe
+console.log(Car.describe());
