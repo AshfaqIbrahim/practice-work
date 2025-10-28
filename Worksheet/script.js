@@ -873,45 +873,119 @@
 // }
 // stackUnderflow();
 
-class Car {
-  // 1. Constructor
-  constructor(make, model) {
-    this.make = make;
-    this.model = model;
-    this.isRunning = false;
-  }
+// class Car {
+//   // 1. Constructor
+//   constructor(make, model) {
+//     this.make = make;
+//     this.model = model;
+//     this.isRunning = false;
+//   }
 
-  // 2. Method
-  start() {
-    this.isRunning = true;
-    return `${this.make} ${this.model} is started.`;
-  }
+//   // 2. Method
+//   start() {
+//     this.isRunning = true;
+//     return `${this.make} ${this.model} is started.`;
+//   }
 
-  // 3. Getter
-  get status() {
-    return this.isRunning ? 'running' : 'stopped';
-  }
+//   // 3. Getter
+//   get status() {
+//     return this.isRunning ? 'running' : 'stopped';
+//   }
 
-  // 4. Static Method
-  static describe() {
-    return 'This is a blueprint for car objects.';
-  }
+//   // 4. Static Method
+//   static describe() {
+//     return 'This is a blueprint for car objects.';
+//   }
+// }
+// const myCar = new Car("BMW", "M2");
+
+// //Accessing the make of the 'Car'
+// console.log(myCar.make);
+
+// //Accessing the model of the 'Car'
+// console.log(myCar.model);
+
+// //Starting the car
+// console.log(myCar.start());
+
+
+// //Checking the status of myCar
+// console.log( `${myCar.make} ${myCar.model} is ${myCar.status}` ); 
+
+
+// //Describe
+// console.log(Car.describe());
+
+
+
+//Genereator funcvtio
+// function* counter() {
+//   let i = 1;
+//   while (i <= 3) {
+//     yield i;
+//     i++;
+//   }
+// }
+
+// let count = counter();
+
+// console.log(count.next().value); // 1
+// console.log(count.next().value); // 2
+// console.log(count.next().value); // 3
+// console.log(count.next().done);  // true
+
+
+// function* simpleGenerator() {
+//   console.log("Start");
+//   yield 1; // Pause 1
+//   console.log("Middle");
+//   yield 2; // Pause 2
+//   console.log("End");
+// }
+
+// const generator = simpleGenerator();
+// generator.next();
+
+// console.log(generator.next());
+// console.log(generator.next());
+// console.log(generator.next());
+
+
+
+// //Callback()
+
+// function greet(name,callback){
+//   let upper = name.toUpperCase();
+//   callback(upper);  
+// }
+
+// function toUpper(result){
+//   console.log("UpperCase: " +result);
+// }
+// greet("Ashfaq",toUpper);
+
+
+// //2.
+// function add(a,b,callback){
+//   let sum = a + b;
+//   callback(sum);
+// }
+
+// function display(result){
+//   console.log(`Result : ${result}`)
+// }
+
+// add(5,4,display);
+
+
+function double(a,b,callback){
+  let num1 = a;
+  let num2 = b;
+  callback(num1,num2);
 }
-const myCar = new Car("BMW", "M2");
-
-//Accessing the make of the 'Car'
-console.log(myCar.make);
-
-//Accessing the model of the 'Car'
-console.log(myCar.model);
-
-//Starting the car
-console.log(myCar.start());
-
-
-//Checking the status of myCar
-console.log( `${myCar.make} ${myCar.model} is ${myCar.status}` ); 
-
-
-//Describe
-console.log(Car.describe());
+function display(num1,num2){
+  let result = num1 * num2;
+  console.log(`${num1} * ${num2} = ${result}`);
+  
+} 
+double(6,2,display);
