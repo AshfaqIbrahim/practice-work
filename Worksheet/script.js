@@ -978,14 +978,51 @@
 // add(5,4,display);
 
 
-function double(a,b,callback){
-  let num1 = a;
-  let num2 = b;
-  callback(num1,num2);
-}
-function display(num1,num2){
-  let result = num1 * num2;
-  console.log(`${num1} * ${num2} = ${result}`);
-  
-} 
-double(6,2,display);
+// function double(a,b,callback){
+//   let num1 = a;
+//   let num2 = b;
+//   callback(num1,num2);
+// }
+// function display(num1,num2){
+//   let result = num1 * num2;
+//   console.log(`${num1} * ${num2} = ${result}`);
+// } 
+// double(6,2,display); 
+
+
+
+// //Promises in JS
+// let prm = new Promise((resolve, reject) =>{
+//     console.log("Successful executor function...");
+//     resolve("Success!");
+
+// })
+
+// prm
+// .then((result) => {
+//     console.log(result);
+// })
+// .catch((result) => {
+//     console.log(result);
+// })
+
+
+// //
+// let promise = new Promise((resolve, reject) => {
+//   let success = true;
+
+//   if (success) {
+//     resolve("Operation successful!");
+//   } else {
+//     reject("Something went wrong!");
+//   }
+// });
+// promise
+// .then((result) => {
+//     console.log(result);
+// })
+// .catch((result) => {
+//     console.log(result);
+// })
+
+
