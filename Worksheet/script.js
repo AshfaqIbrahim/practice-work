@@ -848,9 +848,7 @@
 // // Caught error: User must be 18 or older.
 // // End of age verification process.
 
-
 ////****************************************************************************************************************
-
 
 // //stack overflow
 // function stackOverflow(){
@@ -908,15 +906,11 @@
 // //Starting the car
 // console.log(myCar.start());
 
-
 // //Checking the status of myCar
-// console.log( `${myCar.make} ${myCar.model} is ${myCar.status}` ); 
-
+// console.log( `${myCar.make} ${myCar.model} is ${myCar.status}` );
 
 // //Describe
 // console.log(Car.describe());
-
-
 
 //Genereator funcvtio
 // function* counter() {
@@ -934,7 +928,6 @@
 // console.log(count.next().value); // 3
 // console.log(count.next().done);  // true
 
-
 // function* simpleGenerator() {
 //   console.log("Start");
 //   yield 1; // Pause 1
@@ -950,20 +943,17 @@
 // console.log(generator.next());
 // console.log(generator.next());
 
-
-
 // //Callback()
 
 // function greet(name,callback){
 //   let upper = name.toUpperCase();
-//   callback(upper);  
+//   callback(upper);
 // }
 
 // function toUpper(result){
 //   console.log("UpperCase: " +result);
 // }
 // greet("Ashfaq",toUpper);
-
 
 // //2.
 // function add(a,b,callback){
@@ -977,7 +967,6 @@
 
 // add(5,4,display);
 
-
 // function double(a,b,callback){
 //   let num1 = a;
 //   let num2 = b;
@@ -986,12 +975,10 @@
 // function display(num1,num2){
 //   let result = num1 * num2;
 //   console.log(`${num1} * ${num2} = ${result}`);
-// } 
-// double(6,2,display); 
-
+// }
+// double(6,2,display);
 
 ////****************************************************************************************************************
-
 
 // //Promises in JS
 // let prm = new Promise((resolve, reject) =>{
@@ -1007,12 +994,6 @@
 // .catch((result) => {
 //     console.log(result);
 // })
-
-
-
-
-
-
 
 // //
 // let promise = new Promise((resolve, reject) => {
@@ -1032,15 +1013,14 @@
 //     console.log(result);
 // })
 
-
 // //async and await
 // function prm(){
 //     return new Promise((resolve,reject) =>{
 //       setTimeout(() => {
-//         console.log("Task completed");  
-//         resolve();      
-//       },3000) 
-//     }) 
+//         console.log("Task completed");
+//         resolve();
+//       },3000)
+//     })
 // }
 
 // async function run(){
@@ -1050,16 +1030,14 @@
 //   }
 //   catch(err){
 //     console.log("Promise not fulfilled!");
-    
+
 //   }
 // }
 // run();
 
-
-
 // let prm = new Promise((resolve,reject) => {
 //   console.log("Successful executor function");
-//   reject("Task not completed")  
+//   reject("Task not completed")
 // })
 
 // prm
@@ -1070,12 +1048,11 @@
 //   console.log(result);
 // })
 
-
 // //Promise chain using async and await
 // function task1(){
 //   return new Promise((resolve,reject) => {
 //     console.log("Task 1 started")
-    
+
 //     setTimeout(() => {
 //       console.log("Task 1 completed!");
 //       resolve();
@@ -1086,7 +1063,7 @@
 // function task2(){
 //   return new Promise((resolve,reject) => {
 //     console.log("Task 2 started");
-   
+
 //    setTimeout(() => {
 //     console.log("Task 2 completed!");
 //     resolve();
@@ -1097,7 +1074,7 @@
 // function task3(){
 //   return new Promise((resolve,reject) => {
 //     console.log("Task 3 started");
-  
+
 //     setTimeout(() => {
 //       console.log("Task 3 completed");
 //       resolve();
@@ -1108,7 +1085,7 @@
 // function task4(){
 //   return new Promise((resolve,reject) => {
 //     console.log("Task 4 started");
-  
+
 //     setTimeout(() => {
 //       console.log("Task 4 completed");
 //       resolve();
@@ -1116,20 +1093,18 @@
 //   })
 // }
 
-
-// //using await and async but without funciton we dont want async. here i havce used try and catch for chained promise 
+// //using await and async but without funciton we dont want async. here i havce used try and catch for chained promise
 // try{
 //   await task1();
 //   await task2();
 //   await task3();
 //   await task4();
-//   console.log("All tasks completed...");    
+//   console.log("All tasks completed...");
 // }
 
 // catch(err){
 //   console.log("Promise failed");
 // }
-
 
 // task1()
 // .then(task2)
@@ -1138,21 +1113,39 @@
 // .then(() => console.log("All tasks are completed!"))
 // .catch(() => console.log("Promise failed"))
 
-
-
 // //Fetch API
 // fetch("https://catfact.ninja/fact")
 // .then((res) => res.json())
 // .then((txt) => console.log(txt))
 // .catch(() => console.log("API failed"));
 
-
- 
-
 // //Fetch using Async, Await
 // async function catFacts(){
 //     const data = await fetch("https://catfact.ninja/fact")
 //     const txt = await data.json();
-//     console.log(txt);  
+//     console.log(txt);
 // }
-// catFacts(); 
+// catFacts();
+
+// // getting titles of the api object
+// fetch("https://fakestoreapi.com/products")
+// .then((data) => data.json())
+// .then((response) => {
+//   console.log(response)
+//   const titles = response.map((x) => console.log(x.title))
+// })
+// .catch(() => console.log("Api failed"))
+
+//Using single then
+fetch("https://fakestoreapi.com/products")
+.then( async(data) => {
+  const a = await data.json();
+  const onlyTitles = a.map(x => console.log(x.title));
+})
+.catch(() => console.log("Api failed"));
+
+
+fetch("https://fakestoreapi.com/products")
+  .then( (data) => data.json())
+  .then((response) => response.map((x) => console.log(x.title)))
+  .catch(() => console.log("Api failed"));
