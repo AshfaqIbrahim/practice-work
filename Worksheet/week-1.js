@@ -241,27 +241,28 @@
 //     "Customer <name> has an order of $<total> and its status is <status>".
 //     Use this function to *print all orders* to the console.
     
- const orders = [
-  { id: 1, customer: "Alice", total: 250, status: "completed" },
-  { id: 2, customer: "Bob", total: 80, status: "pending" },
-  { id: 3, customer: "Charlie", total: 120, status: "completed" },
-  { id: 4, customer: "Dave", total: 300, status: "completed" },
-  { id: 5, customer: "Eve", total: 50, status: "pending" }
-];
+//  const orders = [
+//   { id: 1, customer: "Alice", total: 250, status: "completed" },
+//   { id: 2, customer: "Bob", total: 80, status: "pending" },
+//   { id: 3, customer: "Charlie", total: 120, status: "completed" },
+//   { id: 4, customer: "Dave", total: 300, status: "completed" },
+//   { id: 5, customer: "Eve", total: 50, status: "pending" }
+// ];
 
 
-// 1. Create a *new array* containing only the *totals of completed orders
-let completedOrder = orders.filter(a =>  a.status == "completed") .map(x => x.total );
-console.log(completedOrder);
+// // 1. Create a *new array* containing only the *totals of completed orders
+// let completedOrder = orders.filter(a =>  a.status == "completed") .map(x => x.total );
+// console.log(completedOrder);
 
-// 2. Calculate the *sum of all completed order totals*.
-let sum = completedOrder.reduce((a,b) => a+b);
-console.log(sum);
+// // 2. Calculate the *sum of all completed order totals*.
+// let sum = completedOrder.reduce((a,b) => a+b);
+// console.log(sum);
 
-// 3. Create a *new array of customer names* who have *completed orders with totals greater than 200*.
-let customer = orders.filter(a =>  a.status == "completed");
+// // 3. Create a *new array of customer names* who have *completed orders with totals greater than 200*.
+// let customer = orders.filter(a =>  a.status == "completed");
 
-let result = customer.filter(a => a.total > 200).map(x => x.customer);
-console.log(result);
+// let result = customer.filter(a => a.total > 200).map(x => x.customer);
+// console.log(result);
+
 
 

@@ -1011,6 +1011,9 @@
 
 
 
+
+
+
 // //
 // let promise = new Promise((resolve, reject) => {
 //   let success = true;
@@ -1035,7 +1038,7 @@
 //     return new Promise((resolve,reject) =>{
 //       setTimeout(() => {
 //         console.log("Task completed");  
-//         reject();      
+//         resolve();      
 //       },3000) 
 //     }) 
 // }
@@ -1120,8 +1123,7 @@
 //   await task2();
 //   await task3();
 //   await task4();
-//   console.log("All tasks completed...");
-  
+//   console.log("All tasks completed...");    
 // }
 
 // catch(err){
@@ -1137,3 +1139,20 @@
 // .catch(() => console.log("Promise failed"))
 
 
+
+// //Fetch API
+// fetch("https://catfact.ninja/fact")
+// .then((res) => res.json())
+// .then((txt) => console.log(txt))
+// .catch(() => console.log("API failed"));
+
+
+ 
+
+// //Fetch using Async, Await
+// async function catFacts(){
+//     const data = await fetch("https://catfact.ninja/fact")
+//     const txt = await data.json();
+//     console.log(txt);  
+// }
+// catFacts(); 
