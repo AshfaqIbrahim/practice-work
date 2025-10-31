@@ -1052,62 +1052,62 @@
 //   console.log(result);
 // })
 
-//Promise chain using async and await
-function task1(){
-  return new Promise((resolve,reject) => {
-    console.log("Task 1 started")
+// //Promise chain using async and await
+// function task1(){
+//   return new Promise((resolve,reject) => {
+//     console.log("Task 1 started")
 
-    setTimeout(() => {
-      console.log("Task 1 completed!");
-      reject();
-    },3000)
-  })
-}
+//     setTimeout(() => {
+//       console.log("Task 1 completed!");
+//       reject();
+//     },3000)
+//   })
+// }
 
-function task2(){
-  return new Promise((resolve,reject) => {
-    console.log("Task 2 started");
+// function task2(){
+//   return new Promise((resolve,reject) => {
+//     console.log("Task 2 started");
 
-   setTimeout(() => {
-    console.log("Task 2 completed!");
-    reject();
-   },3000)
-  })
-}
+//    setTimeout(() => {
+//     console.log("Task 2 completed!");
+//     reject();
+//    },3000)
+//   })
+// }
 
-function task3(){
-  return new Promise((resolve,reject) => {
-    console.log("Task 3 started");
+// function task3(){
+//   return new Promise((resolve,reject) => {
+//     console.log("Task 3 started");
 
-    setTimeout(() => {
-      console.log("Task 3 completed");
-      resolve();
-    },3000)
-  })
-}
+//     setTimeout(() => {
+//       console.log("Task 3 completed");
+//       resolve();
+//     },3000)
+//   })
+// }
 
-function task4(){
-  return new Promise((resolve,reject) => {
-    console.log("Task 4 started");
+// function task4(){
+//   return new Promise((resolve,reject) => {
+//     console.log("Task 4 started");
 
-    setTimeout(() => {
-      console.log("Task 4 completed");
-      resolve();
-    },3000)
-  })
-}
+//     setTimeout(() => {
+//       console.log("Task 4 completed");
+//       resolve();
+//     },3000)
+//   })
+// }
 
-// using await and async but without funciton we dont want async. here i havce used try and catch for chained promise
-try{
-  await task1();
-  await task2();
-  await task3();
-  await task4();
-  console.log("All tasks completed...");
-}
-catch(err){
-  console.log("Promise failed");
-}
+// // using await and async but without funciton we dont want async. here i havce used try and catch for chained promise
+// try{
+//   await task1();
+//   await task2();
+//   await task3();
+//   await task4();
+//   console.log("All tasks completed...");
+// }
+// catch(err){
+//   console.log("Promise failed");
+// }
 
 
 // task1()
@@ -1164,3 +1164,8 @@ catch(err){
 //   .then( (data) => data.json())
 //   .then((response) => response.map((x) => console.log(x.title)))
 //   .catch(() => console.log("Api failed"));
+
+
+
+
+
