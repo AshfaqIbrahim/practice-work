@@ -995,6 +995,7 @@
 //     console.log(result);
 // })
 
+
 // //
 // let promise = new Promise((resolve, reject) => {
 //   let success = true;
@@ -1005,6 +1006,7 @@
 //     reject("Something went wrong!");
 //   }
 // });
+
 // promise
 // .then((result) => {
 //     console.log(result);
@@ -1012,6 +1014,8 @@
 // .catch((result) => {
 //     console.log(result);
 // })
+
+
 
 // //async and await
 // function prm(){
@@ -1024,16 +1028,16 @@
 // }
 
 // async function run(){
-//   try {
+//   try{
 //     await prm();
 //     console.log("Promise fulfilled");
 //   }
 //   catch(err){
 //     console.log("Promise not fulfilled!");
-
 //   }
 // }
 // run();
+
 
 // let prm = new Promise((resolve,reject) => {
 //   console.log("Successful executor function");
@@ -1048,63 +1052,63 @@
 //   console.log(result);
 // })
 
-// //Promise chain using async and await
-// function task1(){
-//   return new Promise((resolve,reject) => {
-//     console.log("Task 1 started")
+//Promise chain using async and await
+function task1(){
+  return new Promise((resolve,reject) => {
+    console.log("Task 1 started")
 
-//     setTimeout(() => {
-//       console.log("Task 1 completed!");
-//       resolve();
-//     },3000)
-//   })
-// }
+    setTimeout(() => {
+      console.log("Task 1 completed!");
+      reject();
+    },3000)
+  })
+}
 
-// function task2(){
-//   return new Promise((resolve,reject) => {
-//     console.log("Task 2 started");
+function task2(){
+  return new Promise((resolve,reject) => {
+    console.log("Task 2 started");
 
-//    setTimeout(() => {
-//     console.log("Task 2 completed!");
-//     resolve();
-//    },3000)
-//   })
-// }
+   setTimeout(() => {
+    console.log("Task 2 completed!");
+    reject();
+   },3000)
+  })
+}
 
-// function task3(){
-//   return new Promise((resolve,reject) => {
-//     console.log("Task 3 started");
+function task3(){
+  return new Promise((resolve,reject) => {
+    console.log("Task 3 started");
 
-//     setTimeout(() => {
-//       console.log("Task 3 completed");
-//       resolve();
-//     },3000)
-//   })
-// }
+    setTimeout(() => {
+      console.log("Task 3 completed");
+      resolve();
+    },3000)
+  })
+}
 
-// function task4(){
-//   return new Promise((resolve,reject) => {
-//     console.log("Task 4 started");
+function task4(){
+  return new Promise((resolve,reject) => {
+    console.log("Task 4 started");
 
-//     setTimeout(() => {
-//       console.log("Task 4 completed");
-//       resolve();
-//     },3000)
-//   })
-// }
+    setTimeout(() => {
+      console.log("Task 4 completed");
+      resolve();
+    },3000)
+  })
+}
 
-// //using await and async but without funciton we dont want async. here i havce used try and catch for chained promise
-// try{
-//   await task1();
-//   await task2();
-//   await task3();
-//   await task4();
-//   console.log("All tasks completed...");
-// }
+// using await and async but without funciton we dont want async. here i havce used try and catch for chained promise
+try{
+  await task1();
+  await task2();
+  await task3();
+  await task4();
+  console.log("All tasks completed...");
+}
+catch(err){
+  console.log("Promise failed");
+}
 
-// catch(err){
-//   console.log("Promise failed");
-// }
 
 // task1()
 // .then(task2)
@@ -1113,11 +1117,17 @@
 // .then(() => console.log("All tasks are completed!"))
 // .catch(() => console.log("Promise failed"))
 
+
+
+
+
 // //Fetch API
 // fetch("https://catfact.ninja/fact")
 // .then((res) => res.json())
 // .then((txt) => console.log(txt))
 // .catch(() => console.log("API failed"));
+
+
 
 // //Fetch using Async, Await
 // async function catFacts(){
@@ -1126,6 +1136,8 @@
 //     console.log(txt);
 // }
 // catFacts();
+
+
 
 // // getting titles of the api object
 // fetch("https://fakestoreapi.com/products")
@@ -1136,16 +1148,19 @@
 // })
 // .catch(() => console.log("Api failed"))
 
-//Using single then
-fetch("https://fakestoreapi.com/products")
-.then( async(data) => {
-  const a = await data.json();
-  const onlyTitles = a.map(x => console.log(x.title));
-})
-.catch(() => console.log("Api failed"));
 
 
-fetch("https://fakestoreapi.com/products")
-  .then( (data) => data.json())
-  .then((response) => response.map((x) => console.log(x.title)))
-  .catch(() => console.log("Api failed"));
+// //Using single then
+// fetch("https://fakestoreapi.com/products")
+// .then( async(data) => {
+//   const a = await data.json();
+//   const onlyTitles = a.map(x => console.log(x.title));
+// })
+// .catch(() => console.log("Api failed"));
+
+
+
+// fetch("https://fakestoreapi.com/products")
+//   .then( (data) => data.json())
+//   .then((response) => response.map((x) => console.log(x.title)))
+//   .catch(() => console.log("Api failed"));
